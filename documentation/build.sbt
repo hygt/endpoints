@@ -15,6 +15,7 @@ val `akka-http-client` = LocalProject("akka-http-client")
 val `akka-http-server` = LocalProject("akka-http-server")
 
 val `http4s-server` = LocalProject("http4s-server")
+val `http4s-server-circe` = LocalProject("http4s-server-circe")
 
 val `xhr-client` = LocalProject("xhr-client")
 val `xhr-client-circe` = LocalProject("xhr-client-circe")
@@ -351,4 +352,4 @@ val `example-basic-http4s-server` =
       libraryDependencies += "org.http4s" %%% "http4s-blaze-server" % http4sVersion,
       libraryDependencies += "org.http4s" %% "http4s-circe" % http4sVersion
     )
-    .dependsOn(`example-basic-shared-jvm`, `http4s-server`, `json-schema-generic-jvm`)
+    .dependsOn(`example-basic-shared-jvm`, `http4s-server`, `http4s-server-circe`, `json-schema-generic-jvm`)
